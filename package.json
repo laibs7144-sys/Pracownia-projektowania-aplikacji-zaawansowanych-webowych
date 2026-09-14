@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "script": "^0.1.4",
+    "type": "^2.7.3",
+    "typescript": "^7.0.2"
+  }
+}
