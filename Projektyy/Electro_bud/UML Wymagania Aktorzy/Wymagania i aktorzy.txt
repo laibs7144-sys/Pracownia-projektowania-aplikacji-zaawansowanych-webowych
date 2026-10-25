@@ -1,0 +1,46 @@
+1. Wymagania funkcjonalne
+FR-01 Logowanie do systemu - System umożliwia użytkownikam logowanie się za pomoca własnego loginu i hasła
+
+FR-02 Zarządzanie produktami - System umożliwia kierownikowi dodawanie nowych produktów, edytowanie ich danych i usuwanie produktów z systemu, Każdy produkt posiada kod EAN, nazwe, kategorię i miejsce przechowywania.
+
+FR-03 Wyszukiwanie produktów - System umożliwia wyszukiwanie produktów po kodzie EAN lub nazwie, użytkownik może również sprawdzić kategorie i lokalizacje produktu.
+
+FR-04 Lokalizacja produktów - System przechowuje informacje o miejscu przechowywania produktu, czyli sektorze, regale i półce. Magazynier może szybko sprawdzić, gdzie znajduje się dany produkt.
+
+FR-05 Sprawdzanie stanu magazynowego - System pokazuje aktualną ilość każdego produktu znajdującego się na magazynie. Stan zmienia się po przyjęciu lub wydaniu towaru.
+
+FR-06 Przyjmowanie towaru - System umożliwia zarejestrowanie przyjęcia towaru. Zapis zawiera produkt, ilość, datę oraz pracownika wykonującego operację. Po przyjęciu ilość produktu w magazynie zostane zwiększona.
+
+FR-07 Wydawanie towaru - System umożliwia zarejestrowanie wydania produktu z magazynu. Zapis zawiera produkt, ilość, datę oraz pracownika wykonującego operację, po wydaniu ilość produktu zostaje zmniejszona.
+
+FR-08 Sprawdzanie ilości przed wydaniem - System sprawdza, czy na magazynie znajduje się wystarczająca ilość produktu i nie pozwala zatwierdzić wydania jeżeli pracownik chce wydać więcej sztuk niż jest dostępnych.
+
+FR-09 Obsługa operacji wykonywanych w tym samym czasie - System sprawdza aktualny stan produktu, gdy kilku pracowników próbuje jednocześnie wykonać operację dotyczącą tego samego towaru. Dzięki temu ilość produktu nie powinna spaść poniżej zera.
+
+FR-10 Historia operacji magazynowych - System zapisuje informacje o przyjęciach i wydaniach towaru. Kierownik może sprawdzić, kto wykonał operację, jakiego produktu dotyczyła, jaka była ilość oraz kiedy została wykonana.
+
+FR-11 Raporty magazynowe - System umożliwia kierownikowi przeglądanie i generowanie raportów dotyczących stanów magazynowych. Dokładny zakres raportów zostanie ustalony na dalszym etapie projektu.
+
+FR-12 Zarządzanie użytkownikami - Administrator może tworzyć i edytować konta użytkowników, nadawać im uprawnienia oraz pomagać w przypadku zapomnienia hasła.
+
+2. Wymagania niefunkcjonalne
+NFR-01 Wydajność - Wyszukiwanie produktu oraz obsługa kodu EAN powinny trwać nie dłużej niż 1–2 sekundy w typowych warunkach pracy.
+
+NFR-02 Bezpieczeństwo - Każdy użytkownik powinien posiadać własne konto. Hasła muszą być przechowywane w bezpieczny sposób, tak aby nie można było ich odczytać jako zwykłego tekstu.
+
+NFR-03 Kontrola dostępu - Dostęp do funkcji systemu zależy od roli użytkownika. Magazynier, kierownik i administrator mają różne uprawnienia.
+
+NFR-04 Spójność danych	- System powinien prawidłowo zapisywać zmiany w stanach magazynowych. Przyjęcia i wydania muszą być uwzględniane w aktualnej ilości produktów.
+
+NFR-05 Łatwość obsługi	- Interfejs powinien być prosty i czytelny. Magazynier powinien móc szybko wyszukać produkt, sprawdzić jego lokalizację i zarejestrować operację.
+
+NFR-06 Dostęp do informacji - Kierownik powinien mieć możliwość sprawdzania informacji o magazynie również poza stanowiskiem znajdującym się bezpośrednio w magazynie.
+
+NFR-07 Poprawne działanie przy wielu użytkownikach - System powinien poprawnie działać, gdy kilku pracowników wykonuje operacje w tym samym czasie, szczególnie gdy dotyczą one tego samego produktu.
+
+3. Aktorzy systemu
+Magazynier - Zajmuje się codzienną obsługą magazynu. Wyszukuje produkty, sprawdza ich lokalizację i aktualną ilość, przyjmuje dostawy oraz rejestruje wydania towaru.
+
+Kierownik magazynu - Nadzoruje pracę magazynu. Może zarządzać danymi produktów, sprawdzać stany magazynowe, przeglądać historię operacji oraz korzystać z raportów. Może też sprawdzać informacje o magazynie poza swoim stanowiskiem pracy.
+
+Administrator - Odpowiada za konta użytkowników i ich uprawnienia. Tworzy oraz edytuje konta, a także pomaga w sytuacji zapomnienia hasła.
